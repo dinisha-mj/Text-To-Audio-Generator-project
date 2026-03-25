@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Speech Generator</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="container">
+<div style="text-align:right;">
+<a href="/logout">
+<button>Logout</button>
+</a>
+</div>
+<h1>🎙 Audio Generator </h1>
+<p class="subtitle">Convert your text into audio</p>
+
+<textarea id="text" placeholder="Enter your text here..."></textarea>
+
+<div class="controls">
+
+<select id="voice">
+<option value="english">English</option>
+<!--<option value="hi">Hindi</option>
+<option value="ta">Tamil</option>-->
+</select>
+
+<select id="speed">
+<option value="0.5">0.5x</option>
+<option value="1" selected>1x</option>
+<option value="1.5">1.5x</option>
+<option value="2">2x</option>
+</select>
+
+</div>
+
+<div class="buttons">
+
+<button onclick="generateAudio()">Speak</button>
+<button onclick="pauseAudio()">Pause</button>
+<button onclick="resumeAudio()">Resume</button>
+<button onclick="stopAudio()">Stop</button>
+<button onclick="clearText()">Clear</button>
+<button onclick="downloadAudio()">Download</button>
+
+</div>
+
+<audio id="audio" controls></audio>
+
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>
